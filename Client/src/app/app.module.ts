@@ -23,6 +23,11 @@ import { ReportPageComponent } from './pages/report-page/report-page.component';
 import { ReportPoliceComponent } from './components/report-police/report-police.component';
 import { ReportDoctorComponent } from './components/report-doctor/report-doctor.component';
 import {CardModule} from 'primeng/card';
+import {StepsModule} from 'primeng/steps';
+import {ToastModule} from 'primeng/toast';
+import { ReportIdentificationComponent } from './components/report-identification/report-identification.component';
+import { ReportPlaceComponent } from './components/report-place/report-place.component';
+import { ReportPoliceIdComponent } from './components/report-police-id/report-police-id.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,10 @@ import {CardModule} from 'primeng/card';
     TopMenuComponent,
     ReportPageComponent,
     ReportPoliceComponent,
-    ReportDoctorComponent
+    ReportDoctorComponent,
+    ReportIdentificationComponent,
+    ReportPlaceComponent,
+    ReportPoliceIdComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +53,9 @@ import {CardModule} from 'primeng/card';
     FormsModule,
     InputTextModule,
     TabMenuModule,
-    CardModule
+    CardModule,
+    StepsModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

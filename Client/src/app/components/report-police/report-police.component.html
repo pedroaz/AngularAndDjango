@@ -1,1 +1,19 @@
-<p>report-police works!</p>
+<div class="card">
+    <p-steps [model]="items" [readonly]="true" [(activeIndex)]="activeIndex"></p-steps>
+    <ng-container [ngSwitch]="activeIndex" >
+        <div *ngSwitchCase="0">
+            <app-report-identification></app-report-identification>
+        </div>
+        <div *ngSwitchCase="1">
+            <app-report-place></app-report-place>
+        </div>
+        <div *ngSwitchCase="2">
+            <app-report-police-id></app-report-police-id>
+        </div>
+    </ng-container>
+    <div class="center">
+        <button (click)="onPrevious()" pButton pRipple type="button" label="Previous" class="p-button-rounded p-button-help"></button>
+        <button (click)="onNext()" pButton pRipple type="button" label="Next" class="p-button-rounded"></button>
+    </div>
+    
+</div>
