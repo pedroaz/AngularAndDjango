@@ -1,12 +1,12 @@
 <div class="card place-form">
     <div class="p-fluid p-formgrid p-grid">
         <div class="p-field p-col-12 p-md-6">
-            <label for="firstname6">Primeiro nome</label>
-            <input id="firstname6" type="text" pInputText> 
+            <label>Primeiro nome</label>
+            <input [(ngModel)]="identification.firstName" type="text" pInputText> 
         </div>
         <div class="p-field p-col-12 p-md-6">
-            <label for="lastname6">Sobrenome</label>
-            <input id="lastname6" type="text" pInputText> 
+            <label>Sobrenome</label>
+            <input [(ngModel)]="identification.lastName" type="text" pInputText> 
         </div>
     </div>
 </div>

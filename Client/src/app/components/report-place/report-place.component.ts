@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Place } from 'src/app/models/place';
+import { AppStateService } from 'src/app/services/app-state.service';
 
 @Component({
   selector: 'app-report-place',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportPlaceComponent implements OnInit {
 
-  constructor() { }
+  public place! : Place;
+
+  constructor(state : AppStateService) { 
+
+    this.place = state.place.getValue();
+  }
 
   ngOnInit(): void {
   }

@@ -12,8 +12,10 @@
         </div>
     </ng-container>
     <div class="center">
-        <button (click)="onPrevious()" pButton pRipple type="button" label="Previous" class="p-button-rounded p-button-help"></button>
-        <button (click)="onNext()" pButton pRipple type="button" label="Next" class="p-button-rounded"></button>
+
+        <button *ngIf="activeIndex != 0" (click)="onPrevious()" pButton pRipple type="button" label="Previous" class="p-button-rounded p-button-help"></button>
+        <button *ngIf="activeIndex != 2" (click)="onNext()" pButton pRipple type="button" label="Next" class="p-button-rounded"></button>
+        <button *ngIf="activeIndex == 2" (click)="onSaveToDatabase()" pButton pRipple type="button" label="Salvar" class="p-button-rounded p-button-success"></button>
     </div>
     
 </div>

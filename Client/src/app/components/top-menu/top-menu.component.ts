@@ -25,7 +25,8 @@ export class TopMenuComponent implements OnInit {
   }
 
   navigateTo(url: string){
-    this.router.navigateByUrl(url);
+    if(url != ""){
+      this.router.navigateByUrl(url);
+    }
   }
-
 }

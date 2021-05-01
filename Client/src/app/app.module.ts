@@ -13,6 +13,9 @@ import { PortalPageComponent } from './pages/portal-page/portal-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { TopBannerComponent } from './components/top-banner/top-banner.component';
 
+// Services
+import { AppStateService } from './services/app-state.service';
+
 // PrimeNg Modules
 import {ButtonModule} from 'primeng/button';
 import {PasswordModule} from 'primeng/password';
@@ -57,7 +60,7 @@ import { ReportPoliceIdComponent } from './components/report-police-id/report-po
     StepsModule,
     ToastModule
   ],
-  providers: [],
+  providers: [AppStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
