@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api/menuitem';
 import { PoliceReport } from 'src/app/models/policeReport';
+import { ApiService } from 'src/app/services/api.service';
 import { AppStateService } from 'src/app/services/app-state.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class ReportPoliceComponent implements OnInit {
   public activeIndex: number = 0;
   public steps = [0, 1, 2]
 
-  constructor(private state : AppStateService) { 
+  constructor(private state : AppStateService, private api : ApiService ) { 
     this.items = [
       {
         label: 'Identificação',
@@ -50,7 +51,7 @@ export class ReportPoliceComponent implements OnInit {
       place: this.state.place.getValue(),
       policeId: this.state.policeId.getValue()
     };
-    console.log(report)
+    this.api.savePoliceReport(report);
   }
 
 }
