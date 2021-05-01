@@ -1,1 +1,17 @@
-<p>login-form works!</p>
+<div id="login-form" class="card">
+    <div class="p-field p-grid">
+        <label for="firstname3" class="p-col-fixed" style="width:100px">Usuário</label>
+        <div class="p-col">
+            <input type="text" pInputText [(ngModel)]="username"/> 
+        </div>
+    </div>
+    <div class="p-field p-grid">
+        <label for="lastname3" class="p-col-fixed" style="width:100px">Senha</label>
+        <div class="p-col">
+            <input id="lastname3" type="text" pInputText> 
+        </div>
+    </div>
+    <div class="center">
+        <button (click)="onLogin()" pButton pRipple type="button" label="Login" class="p-button-secondary p-button-raised p-button-rounded"></button>
+    </div>
+</div>
