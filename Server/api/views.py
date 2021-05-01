@@ -16,4 +16,12 @@ def apiOverview(request):
 def GetAllReports(request):
     reports = Report.objects.all()
     serialier = ReportSerializer(reports, many=True)
-    return Response(serialier.data)
+    data = serialier.data
+    return Response(data)
+
+@api_view(['POST'])
+def AddReport(request):
+    report_serializer = ReportSerializer(data = request.data)
+    report_serializer.is_valid()
+    report_serializer.save()
+    return Response()

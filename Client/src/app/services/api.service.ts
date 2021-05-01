@@ -9,13 +9,18 @@ import { AppStateService } from './app-state.service';
 export class ApiService {
 
 
-  private baseApiUrl = "";
-
-  constructor(private httpClient: HttpClient, private state : AppStateService) { 
+   constructor(private httpClient: HttpClient, private state : AppStateService) { 
 
   }
 
   savePoliceReport(report : PoliceReport){
-    this.httpClient.post(this.baseApiUrl + "policeReport", report);
+    console.log("hey")
+    this.httpClient.post("http://127.0.0.1:8000/api/add-report", {
+      "title": "OtherReport",
+      "reportText": "LULUOUOU"
+    }).subscribe(response => {
+      console.log("Res: ")
+      console.log(response)
+    });
   }
 }

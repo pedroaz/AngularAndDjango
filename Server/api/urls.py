@@ -7,4 +7,5 @@ from . import views
 urlpatterns = [
     path('', views.apiOverview),
     path('get-all-reports', views.GetAllReports),
+    path('add-report', views.AddReport),
 ]
